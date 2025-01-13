@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Helena";
+  src: url("/fonts/Eyesome/Eyesome Script.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Akzidenz-Grotesk";
+  src: url("/fonts/Akzidenz-Grotesk/Berthold-akzidenz-grotesk-be-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
