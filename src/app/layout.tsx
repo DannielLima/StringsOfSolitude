@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Strings of Solitude",
   description: "A story about music, solitude, and self-discovery.",
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#000000",
   icons: {
     icon: "/favicon.ico",
   },
 };
+
+export const generateViewport = () => "width=device-width, initial-scale=1";
 
 export default function RootLayout({
   children,
@@ -34,9 +34,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="author" content="Danniel Lima" />
+        <meta name="theme-color" content="#000000" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gray-900 text-gray-100`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-primary-grey`}
       >
         <div className="flex flex-col min-h-screen">
           <main className="flex-grow">{children}</main>

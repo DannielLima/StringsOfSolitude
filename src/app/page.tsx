@@ -8,32 +8,26 @@ import Characters from "../components/Characters";
 import Resume from "../components/Resume";
 import End from "../components/End";
 
+const sections = [
+  { component: <HomeComponent /> },
+  { component: <Introduction /> },
+  { component: <IntroductionText /> },
+  { component: <Characters /> },
+  { component: <Resume /> },
+  { component: <End /> },
+];
+
 export default function Home() {
   return (
-    <div className="w-full flex flex-col">
-      <section className="relative w-full h-screen">
-        <HomeComponent />
-      </section>
-
-      <section className="relative w-full h-screen">
-        <Introduction />
-      </section>
-
-      <section className="relative w-full h-screen bg-primary-grey flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16">
-        <IntroductionText />
-      </section>
-
-      <section className="relative w-full h-screen">
-        <Characters />
-      </section>
-
-      <section className="relative w-full h-screen">
-        <Resume />
-      </section>
-
-      <section className="relative w-full h-screen">
-        <End />
-      </section>
+    <div className="w-full overflow-hidden">
+      {sections.map((section, index) => (
+        <section
+          key={index}
+          className="w-full min-h-screen flex items-center justify-center bg-cover bg-no-repeat"
+        >
+          {section.component}
+        </section>
+      ))}
     </div>
   );
 }
